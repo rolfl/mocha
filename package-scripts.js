@@ -153,6 +153,11 @@ module.exports = {
           description: 'Run Node.js reporter tests',
           hiddenFromHelp: true
         },
+        noTimeout: {
+          script: test('noTimeout', '--no-timeout "test/no-timeout/*.spec.js"'),
+          description: 'Run Node.js with no-timeout tests',
+          hiddenFromHelp: true
+        },
         only: {
           default: {
             script: `nps ${[
